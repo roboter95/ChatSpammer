@@ -1,0 +1,19 @@
+ChatSpammer for WoW 1.12
+Usage:
+
+/run ChatSpammerStart(text, channel, interval, amount)
+
+text - text to spam
+channel - [optional] channel where to spam, either a name or a number. Default: "world"
+interval - [optional] interval in seconds between messages. Default: 60
+amount - [optional] amount of times to spam or -1 for no limit. Default: -1
+
+Ex. 
+/run ChatSpammerStart("LFM BRD, need tank", "world", 60, 5) - spams "LFM BRD, need tank" message in world channel every minute 5 times total
+/run ChatSpammerStart("LFM BRD, need tank", 2, 30) - spams "LFM BRD, need tank" message in channel number 2 every 30 seconds with no total message limit
+/run ChatSpammerStart("LFM BRD, need tank", "say") - spams "LFM BRD, need tank" message in /say every minute with no  total message limit
+/run ChatSpammerStart("LFM BRD, need tank") - spams "LFM BRD, need tank" message in world channel every minute with no total message limit
+
+
+/run ChatSpammerStop()
+Stops spamming prematurely
